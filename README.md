@@ -1,28 +1,7 @@
-== README
+It is best to store environment variables in the .profile file in the root directory.
+To do this you would:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Open up the file and type export VAR=  # this would be set to whatever you wish the environment var to be.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+It is best to store environment variables when you wish to protect information, if, for instance you were wanting to
+post code where you had your authentication code used to github.
