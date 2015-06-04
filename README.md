@@ -5,3 +5,5 @@ To do this you would:
 
 It is best to store environment variables when you wish to protect information, if, for instance you were wanting to
 post code where you had your authentication code used to github.
+
+Test migrations are only run once.
