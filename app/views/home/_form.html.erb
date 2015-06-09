@@ -6,17 +6,19 @@
   Puppies? <%= params[:puppies] ? "Yes!" : "No" %><br>
   Cold Hard Cash? <%= params[:cash] ? "Yes!" : "No" %><br>
 <% else %>
-  <%= form_tag home_form_path do %>
+  <%= form_for(@survey) do |f|%>
     <div>
       Name: <%= text_field_tag :name %>
     </div>
     <div>
       Favorites:<br>
-      <%= check_box_tag :chocolate %> Chocolate<br>
-      <%= check_box_tag :rainbows %> Rainbows<br>
-      <%= check_box_tag :puppies %> Puppies<br>
-      <%= check_box_tag :cold_hard_cash %> Cold Hard Cash<br>
+      <%= f.check_box_tag :chocolate %> Chocolate<br>
+      <%= f.check_box_tag :rainbows %> Rainbows<br>
+      <%= f.check_box_tag :puppies %> Puppies<br>
+      <%= f.check_box_tag :cold_hard_cash %> Cold Hard Cash<br>
     </div>
-    <%= submit_tag %>
+    <div class="actions">
+      <%= submit_tag %>
+    </div>
   <% end %>
 <% end %>
