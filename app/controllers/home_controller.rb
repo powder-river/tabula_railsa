@@ -1,11 +1,15 @@
 class HomeController < ApplicationController
 
+  def new
+    @survey = Survey.new
+  end
+
   def create
     @survey = Survey.new(survey_params)
 
     respond_to do |format|
       if @survey.save
-        format.html { redirect_to @survey, notice: 'Survey was successfully created.' }
+        format.html { redirect_to home_path(@survey), notice: 'Survey was successfully created.' }
         format.json { render :show, status: :created, location: @survey }
       else
         format.html { render :new }
@@ -14,9 +18,14 @@ class HomeController < ApplicationController
     end
   end
 
+  def show
+    @survey = Survey.find(params[:id])
+  end
 
-  def survey_params
-    params.require(:survey).permit(:name, :chocolate, :rainbows, :puppies, :cash)
+
+
+  private def survey_params
+    params.require(:survey).permit(:name, :chocolate, :rainbow, :puppies, :cash)
   end
 
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#create'
+  root "home#new"
+
   resources :home
 end
