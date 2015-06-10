@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  root "home#form"
-
-  get 'home/form' => 'home#form'
-
-  post 'home/form'
-
+  root 'home#create'
+  resources :home
 end

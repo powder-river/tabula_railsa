@@ -8,17 +8,15 @@
 <% else %>
   <%= form_for(@survey) do |f|%>
     <div>
-      Name: <%= text_field_tag :name %>
+      Name: <%= f.text_field_tag :name %>
     </div>
     <div>
       Favorites:<br>
       <%= f.check_box_tag :chocolate %> Chocolate<br>
       <%= f.check_box_tag :rainbows %> Rainbows<br>
       <%= f.check_box_tag :puppies %> Puppies<br>
-      <%= f.check_box_tag :cold_hard_cash %> Cold Hard Cash<br>
+      <%= f.check_box_tag :cash %> Cold Hard Cash<br>
     </div>
-    <div class="actions">
-      <%= submit_tag %>
-    </div>
+      <%= f.submit_tag %>
   <% end %>
 <% end %>
