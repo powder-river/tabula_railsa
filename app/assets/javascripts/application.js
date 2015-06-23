@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+function oneClick(){
+    var button = document.getElementById("button")
+    button.prop("disabled", "true")
+}
