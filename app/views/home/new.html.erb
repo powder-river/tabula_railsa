@@ -2,12 +2,12 @@
   <div>
     Name: <%= f.text_field :name %>
   </div>
-  <div>
+  <div id="hide_this_stuff" class="hidden">
     Favorites:<br>
     <%= f.check_box :chocolate %> Chocolate<br>
     <%= f.check_box :rainbow %> Rainbows<br>
     <%= f.check_box :puppies %> Puppies<br>
     <%= f.check_box :cash %> Cold Hard Cash<br>
   </div>
-    <%= f.submit id:"submit", onclick: "oneClick();" %>
+    <%= f.submit id:"submit;", onclick: "oneClick();" %>
 <% end %>

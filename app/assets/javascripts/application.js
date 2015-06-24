@@ -15,6 +15,18 @@
 //= require turbolinks
 //= require_tree .
 function oneClick(){
-    var button = document.getElementById("button")
-    button.prop("disabled", "true")
+    var button = document.getElementById("submit");
+    setTimeout(function(){button.disabled = true;}, 1);
 }
+
+oneCLick();
+
+$function (){
+  $('#hide_this_stuff').removeClass('hidden');
+};
+
+// $(function () {
+//     $('#blah').removeClass('hidden');
+// });
+//
+// hideEverything();
